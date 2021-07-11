@@ -1,0 +1,849 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&family=Noto+Serif+TC:wght@200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+body {
+  background: #fff;
+  font-family: 'Noto Sans TC', sans-serif;
+  color: #4C4948;
+  font-size: 14px;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+a {
+  width: 100%;
+  display: block;
+  color: #494843;
+}
+
+.clearfix:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+@font-face {
+  i.material-icons {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://example.com/MaterialIcons-Regular.eot);
+    /* For IE6-8 */
+    src: local("Material Icons"), local("MaterialIcons-Regular"), url(https://example.com/MaterialIcons-Regular.woff2) format("woff2"), url(https://example.com/MaterialIcons-Regular.woff) format("woff"), url(https://example.com/MaterialIcons-Regular.ttf) format("truetype");
+  }
+}
+
+section {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #044f96;
+  position: relative;
+  padding-top: 6%;
+  padding-bottom: 6%;
+}
+
+section .container {
+  width: 100%;
+  position: relative;
+}
+
+section .container .logo {
+  width: calc(365 / 800 * 100%);
+  margin-left: 28%;
+  padding-top: 28%;
+}
+
+section .container .houseinfo {
+  width: calc(350 / 800 * 100%);
+  margin-left: 17%;
+  margin-top: 15%;
+  margin-bottom: 10%;
+}
+
+section .container .ribbon {
+  width: calc(65 / 800 * 100%);
+  position: absolute;
+  top: 0;
+  left: 12%;
+}
+
+section .container .hand {
+  width: calc(295 / 800 * 100%);
+  position: absolute;
+  bottom: -14%;
+  right: 0%;
+}
+
+section .container .icon {
+  width: calc(72 / 800 * 100%);
+  margin: 0 auto;
+}
+
+section .container .topBox {
+  width: 80%;
+  margin: 10% auto;
+  overflow: hidden;
+}
+
+section .container .topBox .title {
+  width: 100%;
+}
+
+section .container .topBox p {
+  color: #fff;
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 300;
+  margin-top: 5%;
+  text-align: justify;
+}
+
+section .container .imgBox {
+  position: relative;
+}
+
+section .container .imgBox .imgslider {
+  width: 80%;
+  margin: 0 auto;
+}
+
+section .container .imgBox .imgslider div {
+  position: relative;
+}
+
+section .container .imgBox .imgslider div span {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  font-size: 12px;
+}
+
+section .container .imgBox .imgslider div span.white {
+  color: #fff;
+}
+
+section .container .imgBox .imgslider div span.black {
+  color: #000;
+}
+
+section .container .imgBox .imgwall > div {
+  position: relative;
+}
+
+section .container .imgBox .imgwall > div span {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  font-size: 12px;
+}
+
+section .container .imgBox .imgwall > div span.white {
+  color: #fff;
+}
+
+section .container .imgBox .imgwall > div span.black {
+  color: #000;
+}
+
+section .container .imgBox .finger {
+  width: 60px;
+  position: absolute;
+  right: calc(10% + 10px);
+  top: calc(50% + 72px);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+@media (max-width: 540px) {
+  section .container .imgBox .finger {
+    width: 48px;
+    top: 72%;
+  }
+}
+
+section .container .formBox {
+  width: 80%;
+  margin: 0 auto;
+}
+
+section .container .formBox p {
+  font-size: 14px;
+  line-height: 20px;
+  color: #fff;
+  text-align: center;
+}
+
+section .container .formBox .formContent {
+  padding: 20px 0;
+  overflow: hidden;
+}
+
+section .container .formBox .formContent .item {
+  width: 100%;
+  border: 1px solid #fff;
+  padding: 8px;
+  margin-bottom: 16px;
+  float: left;
+  color: #fff;
+}
+
+section .container .formBox .formContent .item.small {
+  width: calc((100% - 10px) / 2);
+}
+
+section .container .formBox .formContent .item.mr-10 {
+  margin-right: 10px;
+}
+
+section .container .formBox .formContent .item.bd-0 {
+  border: 0;
+  text-align: center;
+}
+
+section .container .formBox .formContent .item.mb-0 {
+  margin-bottom: 0;
+}
+
+section .container .formBox .formContent .item input, section .container .formBox .formContent .item select, section .container .formBox .formContent .item button, section .container .formBox .formContent .item textarea {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -ms-appearance: none;
+  border: 0;
+  position: relative;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+section .container .formBox .formContent .item label {
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: 300;
+  color: #fff;
+  vertical-align: top;
+}
+
+section .container .formBox .formContent .item input[type="text"], section .container .formBox .formContent .item textarea {
+  width: calc(100% - 150px);
+  line-height: 16px;
+  background-color: transparent;
+  border: 0;
+  font-size: 18px;
+  color: #fff;
+}
+
+section .container .formBox .formContent .item input[type="text"]:focus, section .container .formBox .formContent .item textarea:focus {
+  outline: 0;
+}
+
+section .container .formBox .formContent .item input[type="radio"], section .container .formBox .formContent .item input[type="checkbox"] {
+  width: 14px;
+  height: 14px;
+  border: 1px solid #fff;
+  vertical-align: top;
+  margin-top: 3px;
+}
+
+section .container .formBox .formContent .item input[type="radio"]:checked, section .container .formBox .formContent .item input[type="checkbox"]:checked {
+  background-color: #fff;
+}
+
+section .container .formBox .formContent .item select {
+  width: 100%;
+  text-align-last: center;
+}
+
+section .container .formBox .formContent .item select:valid {
+  color: #fff;
+  background-color: transparent;
+}
+
+section .container .formBox .formContent .item select:checked, section .container .formBox .formContent .item select:focus {
+  outline: 0;
+}
+
+section .container .formBox .formContent .item.select {
+  position: relative;
+}
+
+section .container .formBox .formContent .item.select:after {
+  content: "\e5c5";
+  font-family: 'Material Icons';
+  position: absolute;
+  right: 50%;
+  top: 50%;
+  -webkit-transform: translate(200%, -50%);
+          transform: translate(200%, -50%);
+  color: #fff;
+  font-size: 30px;
+}
+
+section .container .formBox .formContent .item #message {
+  width: calc(100% - 150px);
+  height: 80px;
+  background-color: transparent;
+  font-size: 16px;
+  resize: none;
+}
+
+section .container .formBox .formContent .item #message:checked, section .container .formBox .formContent .item #message:focus {
+  outline: 0;
+  border-bottom: 1px solid #000;
+}
+
+section .container .formBox .formContent .item button {
+  width: 100%;
+  padding: 10px;
+}
+
+section .container .formBox .formContent .item button:hover {
+  cursor: pointer;
+}
+
+section .container .mapBox {
+  width: 80%;
+  margin: 0 auto;
+}
+
+section .container .mapBox iframe {
+  width: 100%;
+  height: 420px;
+}
+
+section .container .navBox {
+  width: 90%;
+  margin: 5% auto 0;
+}
+
+section .container .navBox ul {
+  overflow: hidden;
+  padding: 0 10px;
+}
+
+section .container .navBox ul li {
+  width: calc((100% - 30px) / 4);
+  margin-right: 10px;
+  margin-bottom: 10px;
+  float: left;
+  -webkit-box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.7);
+          box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.7);
+}
+
+section .container .navBox ul li:last-child {
+  margin-right: 0;
+}
+
+section.section1 {
+  background-image: url(../img/section1_bg.jpg);
+  padding-top: 0;
+}
+
+section.section2 {
+  background-image: url(../img/section2_bg.jpg);
+}
+
+section.section2 .container .photoBox {
+  width: 40%;
+  float: left;
+  margin-right: 8%;
+}
+
+section.section2 .container .title {
+  width: 52%;
+  float: left;
+  max-width: 319px;
+}
+
+section.section2 .container p {
+  width: 52%;
+  float: left;
+  margin-top: 14%;
+}
+
+section.section3 {
+  background-image: url(../img/section3_bg.jpg);
+  padding-bottom: 0;
+}
+
+section.section3 .container .title {
+  max-width: 334px;
+}
+
+section.section4 {
+  background-image: url(../img/section4_bg.jpg);
+}
+
+section.section4 .container .title {
+  max-width: 318px;
+}
+
+section.section5 {
+  background-image: url(../img/section5_bg.jpg);
+}
+
+section.section5 .container .title {
+  max-width: 318px;
+}
+
+section.section6 {
+  background-image: url(../img/section6_bg.jpg);
+}
+
+section.section6 .container .title {
+  max-width: 318px;
+}
+
+section.section7 {
+  background-image: url(../img/section7_bg.jpg);
+}
+
+section.section7 .container .title {
+  max-width: 318px;
+}
+
+section.section8 {
+  background-image: url(../img/section8_bg.jpg);
+}
+
+section.section8 .container .title {
+  max-width: 318px;
+}
+
+section.section9 {
+  background-image: url(../img/section9_bg.jpg);
+  background-position: center top;
+  background-size: 100% 94%;
+  padding-bottom: 50px;
+  padding-top: 0;
+}
+
+section.section9 .container .title {
+  max-width: 182px;
+  float: unset;
+  margin: 0 auto;
+}
+
+section.section9 .container .houseinfo {
+  width: 80%;
+  margin: 10% auto;
+}
+
+section.section9 .container .topBox {
+  margin: 5% auto;
+}
+
+section.section9 .container .hand {
+  width: calc(295 / 800 * 100%);
+  position: absolute;
+  bottom: unset;
+  top: 4.5%;
+  right: 0%;
+}
+
+.contactBox .mapBox iframe {
+  width: 100%;
+  height: 420px;
+}
+
+.contactBox .formBox {
+  padding-top: 80px;
+  padding-bottom: 120px;
+  background: url(../img/form_bg.svg) left bottom no-repeat;
+  background-size: 95% auto;
+}
+
+@media (max-width: 1600px) {
+  .contactBox .formBox {
+    background-size: 70% auto;
+    background-position: center 112%;
+  }
+}
+
+@media (max-width: 1400px) {
+  .contactBox .formBox {
+    background-size: 80% auto;
+    background-position: center 112%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .contactBox .formBox {
+    background-size: 90% auto;
+    background-position: center bottom;
+  }
+}
+
+@media (max-width: 960px) {
+  .contactBox .formBox {
+    padding-top: 10%;
+    padding-bottom: 10%;
+  }
+}
+
+.contactBox .formBox .formBoxTop {
+  margin-top: -250px;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .contactBox .formBox .formBoxTop {
+    margin-top: -120px;
+  }
+}
+
+.contactBox .formBox .formBoxTop .formTitle {
+  float: left;
+}
+
+@media (max-width: 768px) {
+  .contactBox .formBox .formBoxTop .formTitle {
+    width: calc(233/768*100%);
+    margin: 0 auto;
+    float: unset;
+  }
+  .contactBox .formBox .formBoxTop .formTitle img {
+    width: 100%;
+  }
+}
+
+.contactBox .formBox .formContent {
+  width: 100%;
+  margin: 50px auto;
+  overflow: hidden;
+}
+
+.contactBox .formBox .formContent input, .contactBox .formBox .formContent button {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -ms-appearance: none;
+  border: 0;
+  padding: 10px;
+  position: relative;
+}
+
+.contactBox .formBox .formContent input:first-child, .contactBox .formBox .formContent button:first-child {
+  margin-bottom: 20px;
+}
+
+.contactBox .formBox .formContent .half {
+  width: 48%;
+  float: left;
+  margin-right: 4%;
+}
+
+.contactBox .formBox .formContent .half:nth-child(2) {
+  margin-right: 0;
+}
+
+@media (max-width: 768px) {
+  .contactBox .formBox .formContent .half {
+    width: 96%;
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+}
+
+.contactBox .formBox .formContent .half .item {
+  width: 100%;
+  overflow: hidden;
+}
+
+.contactBox .formBox .formContent .half .item label {
+  width: 142px;
+  float: left;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+@media (max-width: 768px) {
+  .contactBox .formBox .formContent .half .item label {
+    font-size: 3vw;
+  }
+}
+
+.contactBox .formBox .formContent .half .item input[type="text"] {
+  width: calc(100% - 142px);
+  height: 50px;
+  float: right;
+  background-color: transparent;
+  border-bottom: 1px solid #000;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .contactBox .formBox .formContent .half .item input[type="text"] {
+    font-size: 3vw;
+  }
+}
+
+.contactBox .formBox .formContent .half .item input[type="text"]:focus {
+  outline: 0;
+}
+
+.contactBox .formBox .formContent .half .item #message {
+  width: 100%;
+  background-color: transparent;
+  border: 0;
+  border-bottom: 1px solid #000;
+  font-size: 18px;
+  height: 130px;
+}
+
+@media (max-width: 768px) {
+  .contactBox .formBox .formContent .half .item #message {
+    font-size: 3vw;
+  }
+}
+
+.contactBox .formBox .formContent .half .item #message:checked, .contactBox .formBox .formContent .half .item #message:focus {
+  outline: 0;
+  border-bottom: 1px solid #000;
+}
+
+.contactBox .formBox .formContent .item.full {
+  width: 100%;
+  height: 48px;
+  text-align: center;
+}
+
+.contactBox .formBox .formContent .item.full input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #000;
+  margin-right: 20px;
+  display: inline-block;
+  margin-top: 20px;
+  outline: 0;
+  vertical-align: middle;
+}
+
+.contactBox .formBox .formContent .item.full label {
+  display: inline-block;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  vertical-align: middle;
+  font-size: 18px;
+}
+
+.contactBox .formBox .formContent .item.full input[type="checkbox"]:checked {
+  outline: 0;
+  bottom: 0;
+}
+
+.contactBox .formBox .formContent .item.full input[type="checkbox"]:checked:after {
+  width: 20px;
+  height: 20px;
+  content: "";
+  background: url(../img/check.svg) 0 0 no-repeat;
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  left: 0;
+}
+
+.contactBox .formBox .formContent button {
+  width: 216px;
+  height: 60px;
+  display: block;
+  margin: 20px auto 0;
+  background-color: #719c45;
+  color: #fff;
+  border-radius: 30px;
+  font-size: 20px;
+  text-align: center;
+  font-family: 'Noto Sans TC', sans-serif;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.contactBox .formBox .formContent button:hover {
+  cursor: pointer;
+  background-color: #5d8533;
+}
+
+.popup {
+  width: 100%;
+  margin: 0 auto;
+  min-height: 100%;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.popup .close {
+  width: 60px;
+  height: 60px;
+  background-color: #72adb6;
+  position: absolute;
+  right: -30px;
+  top: -10px;
+  z-index: 10;
+  padding: 10px;
+  border-radius: 50%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  cursor: pointer;
+}
+
+@media (max-width: 800px) {
+  .popup .close {
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+    right: -25px;
+    top: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .popup .close {
+    width: 40px;
+    height: 40px;
+    right: -10px;
+    top: 10px;
+  }
+}
+
+.popup .close:before {
+  content: '\e5cd';
+  font-family: 'Material Icons';
+  color: #fff;
+  font-size: 40px;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+@media (max-width: 600px) {
+  .popup .close:before {
+    font-size: 30px;
+  }
+}
+
+.popup .close:hover, .popup .close:focus {
+  background-color: #3d93ab;
+}
+
+.popup .formGroup {
+  width: 320px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  background-color: #fff;
+  color: #000000;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+
+.popup.is_acted {
+  opacity: 1;
+  visibility: visible;
+}
+
+.slider_black .slick-prev {
+  width: 28px;
+  height: 28px;
+  -webkit-transform: translate(0);
+          transform: translate(0);
+  background: url(../img/arrow_black.svg) center top no-repeat;
+  background-size: cover;
+  left: 20px;
+  z-index: 10;
+}
+
+@media (max-width: 540px) {
+  .slider_black .slick-prev {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.slider_black .slick-next {
+  width: 28px;
+  height: 28px;
+  -webkit-transform: translate(0);
+          transform: translate(0);
+  background: url(../img/arrow_black.svg) center top no-repeat;
+  background-size: cover;
+  -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
+  right: 20px;
+  z-index: 10;
+}
+
+@media (max-width: 540px) {
+  .slider_black .slick-next {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.slider_black .slick-prev:before, .slider_black .slick-next:before {
+  content: "";
+}
+
+.slider_white .slick-prev {
+  width: 28px;
+  height: 28px;
+  -webkit-transform: translate(0);
+          transform: translate(0);
+  background: url(../img/arrow_white.svg) center top no-repeat;
+  background-size: cover;
+  left: 20px;
+  z-index: 10;
+}
+
+@media (max-width: 540px) {
+  .slider_white .slick-prev {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.slider_white .slick-next {
+  width: 28px;
+  height: 28px;
+  -webkit-transform: translate(0);
+          transform: translate(0);
+  background: url(../img/arrow_white.svg) center top no-repeat;
+  background-size: cover;
+  -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
+  right: 20px;
+  z-index: 10;
+}
+
+@media (max-width: 540px) {
+  .slider_white .slick-next {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.slider_white .slick-prev:before, .slider_white .slick-next:before {
+  content: "";
+}
+/*# sourceMappingURL=style.css.map */
