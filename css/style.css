@@ -273,22 +273,6 @@ section .container .formBox .formContent .item select:checked, section .containe
   outline: 0;
 }
 
-section .container .formBox .formContent .item.select {
-  position: relative;
-}
-
-section .container .formBox .formContent .item.select:after {
-  content: "\e5c5";
-  font-family: 'Material Icons';
-  position: absolute;
-  right: 50%;
-  top: 50%;
-  -webkit-transform: translate(200%, -50%);
-          transform: translate(200%, -50%);
-  color: #fff;
-  font-size: 30px;
-}
-
 section .container .formBox .formContent .item #message {
   width: calc(100% - 150px);
   height: 80px;

@@ -212,19 +212,19 @@ section{
                             outline: 0;;
                         }
                     }
-                    &.select{
-                        position: relative;
-                        &:after{
-                            content:"\e5c5";
-                            font-family: 'Material Icons';
-                            position: absolute;
-                            right: 50%;
-                            top: 50%;
-                            transform: translate(200%,-50%);
-                            color: #fff;
-                            font-size: 30px;
-                        }
-                    }
+                    // &.select{
+                    //     position: relative;
+                    //     &:after{
+                    //         content:"\e5c5";
+                    //         font-family: 'Material Icons';
+                    //         position: absolute;
+                    //         right: 50%;
+                    //         top: 50%;
+                    //         transform: translate(200%,-50%);
+                    //         color: #fff;
+                    //         font-size: 30px;
+                    //     }
+                    // }
                     #message{
                         width: calc(100% - 150px);
                         height: 80px;
