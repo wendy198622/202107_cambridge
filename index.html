@@ -30,9 +30,11 @@
     <script type="text/javascript" src="js/slick.js"></script>
     <script type="text/javascript" src="js/swiper.min.js"></script>
     <script type="text/javascript" src="js/swiper.animate1.0.3.min.js"></script>
-    <script type="text/javascript" src="js/index.js"></script>
+    <!-- <script type="text/javascript" src="js/index.js"></script> -->
     <script type="text/javascript" src="js/vue.js"></script>
     <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="./js/er.twzipcode.data.js"></script>
+    <script src="./js/er.twzipcode.min.js"></script>
 
 
 </head>
@@ -261,10 +263,10 @@
                             <input type="text" v-model="email" name="email" placeholder="" required />
                         </div>
                         <div class="item small mr-10 select">
-                            <select name="county"></select>
+                            <select name="county" v-model="county"></select>
                         </div>
                         <div class="item small select">
-                            <select name="district"></select>
+                            <select name="district" v-model="district"></select>
                         </div>
                         <div class="item bd-0 mb-0">
                             索取資料：
@@ -315,27 +317,8 @@
                 {{msg}}
             </div>
         </section>
-	</div>
-	
-	<script src="./js/er.twzipcode.data.js"></script>
-	<script src="./js/er.twzipcode.min.js"></script>
-	<!-- <script type="text/javascript">
-	  erTWZipcode();
-	</script> -->
-	<script>
-			erTWZipcode({
-			  defaultCountyText: "請選縣市",
-			  defaultDistrictText: "請選鄉鎮"
-			});
-			var distEl = document.querySelector('#myForm select[name=district]');
-			document.querySelector('#myForm select[name=county]')
-			  .addEventListener("change", function(evt){
-				//refresh district element
-				M.FormSelect.init(distEl);
-			  });
-			//first time init all select elements in #myForm
-			M.FormSelect.init(document.querySelectorAll('#myForm select'));
-		  </script>
+    </div>
+
     <script>
         new Vue({
             el: '#app',
@@ -347,7 +330,9 @@
                 needInfo: "是",
                 message: "",
                 email: "",
-                msg: ""
+                msg: "",
+                district: "",
+                county: ""
             },
             methods: {
                 showPopup: function(tag) {
@@ -360,7 +345,8 @@
                     var content = "姓名:" + self.name + "<br>" +
                         "信箱:" + self.email + "<br>" +
                         "電話:" + self.phone + "<br>" +
-                        "索取資料:" + self.needInfo + "<br>" +
+                        "區域:" + self.phone + "<br>" +
+                        "索取資料:" + self.county + "-" + self.district + "<br>" +
                         "留言:" + self.message + "<br>";
                     console.log(content)
 
@@ -376,29 +362,36 @@
                     self.msg = "表單傳送中...。"
                     self.popupIndex = 10
 
-                    // Email.send({
-                    //     SecureToken: "e72b0d9a-0075-4eff-8b5e-74df58c177e4", //勿更動
-                    //     To: 'a034191558@gmail.com', //收件者填這
-                    //     From: "tt836427@gmail.com", //寄件者email，此為虛擬，勿更動
-                    //     Subject: "我要預約禾雅看房", //信件主旨
-                    //     Body: content
-                    // }).then(
-                    //     message => {
-                    //         if (message == "OK") {
-                    //             self.msg = "您已成功送出表單，將有專人與您聯絡。"
-                    //             setTimeout(function() {
-                    //                 self.popupIndex = 0
-                    //             }, 3000);
-                    //         } else {
-                    //             self.msg = "表單送出失敗，請重新送出。"
-                    //         }
-                    //     }
-                    // );
+                    Email.send({
+                        SecureToken: "e72b0d9a-0075-4eff-8b5e-74df58c177e4", //勿更動
+                        To: 'a034191558@gmail.com', //收件者填這
+                        From: "tt836427@gmail.com", //寄件者email，此為虛擬，勿更動
+                        Subject: "我要預約禾雅看房", //信件主旨
+                        Body: content
+                    }).then(
+                        message => {
+                            if (message == "OK") {
+                                self.msg = "您已成功送出表單，將有專人與您聯絡。"
+                                setTimeout(function() {
+                                    self.popupIndex = 0
+                                }, 3000);
+                            } else {
+                                self.msg = "表單送出失敗，請重新送出。"
+                            }
+                        }
+                    );
                 }
             }
         })
     </script>
     <script>
+        erTWZipcode({
+            countySelector: 'select[name=county]',
+            districtSelector: 'select[name=district]',
+            defaultCountyText: "請選縣市",
+            defaultDistrictText: "請選鄉鎮"
+        });
+
         new WOW().init();
 
         $('.slider').slick({
