@@ -277,6 +277,8 @@ section .container .formBox .formContent .item input[type="radio"]:checked, sect
 section .container .formBox .formContent .item select {
   width: 100%;
   text-align-last: center;
+  color: #fff;
+  background-color: transparent;
 }
 
 section .container .formBox .formContent .item select:valid {
