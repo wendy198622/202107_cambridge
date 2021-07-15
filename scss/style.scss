@@ -44,8 +44,14 @@ section{
     position: relative;
     padding-top: 6%;
     padding-bottom: 6%;
+    @media (min-width: 800px) {
+        max-width: 100%; 
+        background-size: 100% auto;
+    }
     .container{ 
         width: 100%; 
+        max-width: 800px;
+        margin: 0 auto;
         position: relative;
         .logo{
             width: calc(365 / 800 * 100%);
@@ -83,11 +89,14 @@ section{
             }
             p{
                 color: #fff;
-                font-size: 16px;
-                line-height: 26px;
+                font-size: 18px;
+                line-height: 30px;
                 font-weight: 300;
                 margin-top: 5%;
                 text-align: justify;
+                @media (max-width: 600px) {
+                    font-size: 16px;
+                }
             }
         }
         .imgBox{
@@ -278,6 +287,9 @@ section{
     &.section1{
         background-image: url(../img/section1_bg.jpg);
         padding-top: 0;
+        @media (min-width: 800px) {
+            background-image: url(../img/section1_bg_pc.jpg);
+        }
         .container{ 
             // height: 0;
             // padding-bottom: calc( 716 / 800 * 100%);
@@ -285,6 +297,9 @@ section{
     }
     &.section2{
         background-image: url(../img/section2_bg.jpg);
+        @media (min-width: 800px) {
+            background-image: url(../img/section2_bg_pc.jpg);
+        }
         .container{ 
             // height: 0;
             // padding-bottom: calc( 1133 / 800 * 100%);
@@ -292,22 +307,37 @@ section{
                 width: 40%;
                 float: left;
                 margin-right: 8%;
+                @media (max-width: 600px) {
+                    float: unset;
+                    margin: 0 auto;
+                }
             }
             .title{
                 width: 52%;
                 float: left;
-                max-width: 319px;
+                max-width: 300px;
+                @media (max-width: 600px) {
+                    width: 100%;
+                    margin-top: 10%;
+                }
             }
             p{
                 width: 52%;
                 float: left;
                 margin-top: 14%;
+                @media (max-width: 600px) {
+                    width: 100%;
+                    margin-top: 5%;
+                }
             }
         }
     }
     &.section3{
         background-image: url(../img/section3_bg.jpg);
         padding-bottom: 0;
+        @media (min-width: 800px) {
+            background-image: url(../img/section3_bg_pc.jpg);
+        }
         .container{ 
             // height: 0;
             // padding-bottom: calc( 1022 / 800 * 100%);
@@ -318,6 +348,9 @@ section{
     }
     &.section4{
         background-image: url(../img/section4_bg.jpg);
+        @media (min-width: 800px) {
+            background-image: url(../img/section4_bg_pc.jpg);
+        }
         .container{ 
             // height: 0;
             // padding-bottom: calc( 1022 / 800 * 100%);
@@ -328,6 +361,9 @@ section{
     }
     &.section5{
         background-image: url(../img/section5_bg.jpg);
+        @media (min-width: 800px) {
+            background-image: url(../img/section5_bg_pc.jpg);
+        }
         .container{ 
             // height: 0;
             // padding-bottom: calc( 1022 / 800 * 100%);
@@ -338,6 +374,9 @@ section{
     }
     &.section6{
         background-image: url(../img/section6_bg.jpg);
+        @media (min-width: 800px) {
+            background-image: url(../img/section6_bg_pc.jpg);
+        }
         .container{ 
             // height: 0;
             // padding-bottom: calc( 1022 / 800 * 100%);
@@ -348,6 +387,9 @@ section{
     }
     &.section7{
         background-image: url(../img/section7_bg.jpg);
+        @media (min-width: 800px) {
+            background-image: url(../img/section7_bg_pc.jpg);
+        }
         .container{ 
             // height: 0;
             // padding-bottom: calc( 1022 / 800 * 100%);
@@ -358,6 +400,9 @@ section{
     }
     &.section8{
         background-image: url(../img/section8_bg.jpg);
+        @media (min-width: 800px) {
+            background-image: url(../img/section8_bg_pc.jpg);
+        }
         .container{ 
             // height: 0;
             // padding-bottom: calc( 1022 / 800 * 100%);
@@ -368,6 +413,9 @@ section{
     }
     &.section9{
         background-image: url(../img/section9_bg.jpg);
+        @media (min-width: 800px) {
+            background-image: url(../img/section9_bg_pc.jpg);
+        }
         background-position: center top;
         background-size: 100% 94%;
         padding-bottom: 50px;
@@ -578,6 +626,7 @@ section{
 
 .popup{
     width: 100%;
+    max-width: 100%;
     margin: 0 auto;
     min-height: 100%;
     position: fixed;

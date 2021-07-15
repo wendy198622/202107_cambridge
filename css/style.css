@@ -53,8 +53,17 @@ section {
   padding-bottom: 6%;
 }
 
+@media (min-width: 800px) {
+  section {
+    max-width: 100%;
+    background-size: 100% auto;
+  }
+}
+
 section .container {
   width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
   position: relative;
 }
 
@@ -102,11 +111,17 @@ section .container .topBox .title {
 
 section .container .topBox p {
   color: #fff;
-  font-size: 16px;
-  line-height: 26px;
+  font-size: 18px;
+  line-height: 30px;
   font-weight: 300;
   margin-top: 5%;
   text-align: justify;
+}
+
+@media (max-width: 600px) {
+  section .container .topBox p {
+    font-size: 16px;
+  }
 }
 
 section .container .imgBox {
@@ -333,8 +348,20 @@ section.section1 {
   padding-top: 0;
 }
 
+@media (min-width: 800px) {
+  section.section1 {
+    background-image: url(../img/section1_bg_pc.jpg);
+  }
+}
+
 section.section2 {
   background-image: url(../img/section2_bg.jpg);
+}
+
+@media (min-width: 800px) {
+  section.section2 {
+    background-image: url(../img/section2_bg_pc.jpg);
+  }
 }
 
 section.section2 .container .photoBox {
@@ -343,10 +370,24 @@ section.section2 .container .photoBox {
   margin-right: 8%;
 }
 
+@media (max-width: 600px) {
+  section.section2 .container .photoBox {
+    float: unset;
+    margin: 0 auto;
+  }
+}
+
 section.section2 .container .title {
   width: 52%;
   float: left;
-  max-width: 319px;
+  max-width: 300px;
+}
+
+@media (max-width: 600px) {
+  section.section2 .container .title {
+    width: 100%;
+    margin-top: 10%;
+  }
 }
 
 section.section2 .container p {
@@ -355,9 +396,22 @@ section.section2 .container p {
   margin-top: 14%;
 }
 
+@media (max-width: 600px) {
+  section.section2 .container p {
+    width: 100%;
+    margin-top: 5%;
+  }
+}
+
 section.section3 {
   background-image: url(../img/section3_bg.jpg);
   padding-bottom: 0;
+}
+
+@media (min-width: 800px) {
+  section.section3 {
+    background-image: url(../img/section3_bg_pc.jpg);
+  }
 }
 
 section.section3 .container .title {
@@ -368,12 +422,24 @@ section.section4 {
   background-image: url(../img/section4_bg.jpg);
 }
 
+@media (min-width: 800px) {
+  section.section4 {
+    background-image: url(../img/section4_bg_pc.jpg);
+  }
+}
+
 section.section4 .container .title {
   max-width: 318px;
 }
 
 section.section5 {
   background-image: url(../img/section5_bg.jpg);
+}
+
+@media (min-width: 800px) {
+  section.section5 {
+    background-image: url(../img/section5_bg_pc.jpg);
+  }
 }
 
 section.section5 .container .title {
@@ -384,6 +450,12 @@ section.section6 {
   background-image: url(../img/section6_bg.jpg);
 }
 
+@media (min-width: 800px) {
+  section.section6 {
+    background-image: url(../img/section6_bg_pc.jpg);
+  }
+}
+
 section.section6 .container .title {
   max-width: 318px;
 }
@@ -392,12 +464,24 @@ section.section7 {
   background-image: url(../img/section7_bg.jpg);
 }
 
+@media (min-width: 800px) {
+  section.section7 {
+    background-image: url(../img/section7_bg_pc.jpg);
+  }
+}
+
 section.section7 .container .title {
   max-width: 318px;
 }
 
 section.section8 {
   background-image: url(../img/section8_bg.jpg);
+}
+
+@media (min-width: 800px) {
+  section.section8 {
+    background-image: url(../img/section8_bg_pc.jpg);
+  }
 }
 
 section.section8 .container .title {
@@ -410,6 +494,12 @@ section.section9 {
   background-size: 100% 94%;
   padding-bottom: 50px;
   padding-top: 0;
+}
+
+@media (min-width: 800px) {
+  section.section9 {
+    background-image: url(../img/section9_bg_pc.jpg);
+  }
 }
 
 section.section9 .container .title {
@@ -661,6 +751,7 @@ section.section9 .container .hand {
 
 .popup {
   width: 100%;
+  max-width: 100%;
   margin: 0 auto;
   min-height: 100%;
   position: fixed;
