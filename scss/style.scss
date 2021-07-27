@@ -760,3 +760,14 @@ section{
 .slider_white .slick-prev:before, .slider_white .slick-next:before {
     content: "";
 }
+.slick-next{
+    animation: slider_arrow 1s alternate infinite linear;
+}
+@keyframes slider_arrow{
+    from{
+        transform: scaleX(-1) translateX(10px);
+    }
+    to{
+        transform: scaleX(-1) translateX(-10px);
+    }
+}
